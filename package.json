@@ -1,0 +1,34 @@
+{
+  "name": "twitchbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "irc-framework": "^2.9.1",
+    "mongodb": "^2.2.33",
+    "morgan": "^1.9.0",
+    "object-assign": "^4.1.1",
+    "skateboard": "^2.0.0"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Verbanderbog/twitchbot.git"
+  },
+  "author": "Dylan Verbanderbog verbanderbog@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Verbanderbog/twitchbot/issues"
+  },
+  "homepage": "https://github.com/Verbanderbog/twitchbot#readme"
+}

@@ -1,34 +1,36 @@
 {
   "name": "twitchbot",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Node.js Twitch bot",
   "main": "server.js",
   "dependencies": {
-    "chai": "^4.1.2",
-    "chai-http": "^3.0.0",
-    "ejs": "^2.5.7",
-    "express": "^4.16.2",
-    "irc-framework": "^2.9.1",
-    "mongodb": "^2.2.33",
-    "morgan": "^1.9.0",
-    "object-assign": "^4.1.1",
-    "skateboard": "^2.0.0"
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "mocha": "^2.4.5",
+    "mongodb": "^2.1.16",
+    "morgan": "^1.7.0",
+    "object-assign":"4.1.0",
+	"irc-framework": "^2.9.1",
+	"skateboard": "^2.0.0"
   },
-  "devDependencies": {
-    "mocha": "^4.0.1"
+  "engine": {
+    "node": "*",
+    "npm": "*"
   },
   "scripts": {
-    "test": "mocha",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "IP=0.0.0.0 PORT=3030 mocha --timeout 5000 tests/*_test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Verbanderbog/twitchbot.git"
+    "url": "http://github.com/Verbanderbog/twitchbot.git"
   },
-  "author": "Dylan Verbanderbog verbanderbog@gmail.com",
-  "license": "ISC",
+  "author": "Steve Speicher <sspeiche@gmail.com>",
+  "license": "CC-BY-1.0",
   "bugs": {
-    "url": "https://github.com/Verbanderbog/twitchbot/issues"
+    "url": "http://github.com/Verbanderbog/twitchbot/issues"
   },
-  "homepage": "https://github.com/Verbanderbog/twitchbot#readme"
+  "homepage": "http://github.com/Verbanderbog/twitchbot"
 }

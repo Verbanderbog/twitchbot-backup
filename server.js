@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 //  OpenShift sample Node application
 var express = require('express'),
     app     = express(),
@@ -105,35 +103,3 @@ app.listen(port, ip);
 console.log('Server running on http://%s:%s', ip, port);
 
 module.exports = app ;
-
-var MongoClient = require('mongodb').MongoClient;
-var skateboard = require('skateboard');
-var IRC = require('irc-framework');
-
-const bot = new IRC.Client();
-
-function botConnect(callback) {
-	bot.connect({
-		host: 'irc.chat.twitch.tv',
-		port: 6667,
-		nick: "verbanderbot",
-		password: process.env.TWITCH_PASSWORD
-	});
-	console.log("registering");
-	bot.on('registered', () => {
-		console.log("was registered.");
-		const channel = bot.channel('#verbanderbog');
-		channel.join();
-		return callback();
-	});
-}
-
-botConnect(() => {
-	skateboard({port: 3000}, (stream) =>{
-		socket = stream;
-	});
-	console.log("joined channel");
-	bot.matchMessage("verbanderbot", (event) => {
-		event.reply("Hi I'm verbanderbot!");
-	});
-});
